@@ -1,0 +1,20 @@
+server:
+  port: 8081
+  tomcat:
+    max-threads: 1000
+    max-connections: 10000
+    uri-encoding: UTF-8
+spring:
+  jpa:
+    database: mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.test.entity.*

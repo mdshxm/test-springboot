@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.test.mapper.AdminMapper">
+    <!-- 鐧婚檰銆佹敞鍐岄獙璇?-->
+    <select id="select" parameterType="String" resultType="java.util.Map">
+        select t1.* , t2.* from user t1
+        left join admin t2 on t1.name = t2.t_name
+        <where>
+            t1.name = #{name}
+        </where>
+    </select>
+</mapper>
